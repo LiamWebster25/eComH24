@@ -1,37 +1,23 @@
 <?php
 namespace app\controllers;
 
-class Person extends \app\core\Controller{
-function __construct() {
-    
-}
+use stdClass;
 
-    function greet() {
-        //data input
-        $personName = (isset($_GET['personName'])?$_GET[
-            'personName']: 'friend');
-            $someArray = ['one', 'two', 'three'];
-            $assocArray = ['first_name' => 'Alice',
-                           'last_name' => 'Cooper']; //associate array (dictionary)
-        $this->view('Person/greet', ['person_name'=> $personName, 
-        'numbers' => $someArray, 
-        'profile' => $assocArray]);
+class Person extends \app\core\Controller{
+
+    function register() {
+        $this->view('Person/register');
     }
 
-    function greet_again() {
-        //data input
-        $personName = (isset($_GET['personName'])?$_GET[
-            'personName']: 'friend');
-            $someArray = ['one', 'two', 'three'];
-
-            $profileObj = new \stdClass();//profile Object
-            $profileObj->first_name = 'Alice';
-            $profileObj->last_name = 'Cooper';
-
-                //['first_name' => 'Alice',
-                           //'last_name' => 'Cooper']; //associate array (dictionary)
-        $this->view('Person/greet_again', ['person_name'=> $personName, 
-        'numbers' => $someArray, 
-        'profile' => $profileObj]);
+    function complete_registration() {
+        $person = new stdClass();
+        $person->first_name = $_POST['first_name'];
+        $person->last_name = $_POST['last_name'];
+        $person->email = $_POST['email'];
+        $person->weekly_flyer = in_array('weekly_flyer', $_POST['publications']);
+        $person->mailing_list = in_array('mailing_list', $_POST['publications']);
+        //hypothetically send to db
+        //show the feedback view to confirm with the user
+        $this->view('Person/complete_registration', $person);
     }
 }
