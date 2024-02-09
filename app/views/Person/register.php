@@ -28,6 +28,7 @@
             <div class="form-group">
                 <label><input type="checkbox" name="publications[]" value="mailing_list" />Include me on the
                     mailing</label>
+                    <br>
                 <label><input type="checkbox" name="publications[]" value="weekly_flyer" />Send me the weekly
                     flyer</label>
             </div>

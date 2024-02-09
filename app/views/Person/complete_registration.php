@@ -26,11 +26,11 @@
                 <label>Email address: <input type="email" class="form-control"
                  name="email" placeholder="johndoe@email.com" value="<?= $data->email ?>"/></label>
             </div>
-                <label><input type="checkbox" name="publications[]" value = "<?= ($data->
-                mailing_list = true) ? 'checked' : '' ?>"/>Do you want to be in the mailing list?</label>
+                <label><input type="checkbox" name="publications[]" value = "" <?= ($data->
+                mailing_list == true ? 'checked' : '') ?>/>Do you want to be in the mailing list?</label>
                 <br>
-                <label><input type="checkbox" name="publications[]" value = "<?= ($data->
-                mailing_list == true) ? 'checked' : '' ?>"/>Send me the weekly flyer?</label>
+                <label><input type="checkbox" name="publications[]" value = "" <?= ($data->
+                weekly_flyer == true ? 'checked' : '') ?>/>Send me the weekly flyer?</label>
             <div class="form-group">
                 <input type="submit" name = "action" value="Register"/>
             </div>

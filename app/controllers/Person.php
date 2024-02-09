@@ -16,6 +16,7 @@ class Person extends \app\core\Controller{
         $person->email = $_POST['email'];
         $person->weekly_flyer = in_array('weekly_flyer', $_POST['publications']);
         $person->mailing_list = in_array('mailing_list', $_POST['publications']);
+        print_r($person);
         //hypothetically send to db
         //show the feedback view to confirm with the user
         $this->view('Person/complete_registration', $person);
