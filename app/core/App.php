@@ -3,10 +3,19 @@ namespace app\core;
 
 class App
 {
+
+    private $routes = [];
+
+    public function addRoute($url, $handler) {
+        $url = preg_replace('/{([^\/]+)}/', '(?<$1>[^\/]+)', $url);
+        $this->routes[$url] = $handler;
+    }
     function __construct()
     {
         //call the appropriate controller class and method to handle the HTTP Request
-
+        // $this->addRoute('Person/edit/{id}', 'Person,edit');
+        // print_r($this->routes);
+        // exit();
 
         //routing version 0.1
         $url = $_GET['url'];
