@@ -1,4 +1,2 @@
-{"first_name":"test","last_name":"hello","email":"hello@gmail.com","weekly_flyer":true,"mailing_list":true}
-{"first_name":"test","last_name":"hello","email":"hello@gmail.com","weekly_flyer":true,"mailing_list":true}
-{"first_name":"test","last_name":"hello","email":"hello@gmail.com","weekly_flyer":true,"mailing_list":true}{"first_name":"Test3","last_name":"Test3","email":"hello@gmail.com","weekly_flyer":true,"mailing_list":true}
-{"first_name":"Test3","last_name":"Test3","email":"hello@gmail.com","weekly_flyer":false,"mailing_list":false}
+{"first_name":"test","last_name":"Record","email":"test@gmail.com","weekly_flyer":false,"mailing_list":false}
+{"first_name":"hello","last_name":"hello2","email":"hello@hello.com","weekly_flyer":false,"mailing_list":true}

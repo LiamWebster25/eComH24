@@ -12,6 +12,9 @@
 </head>
 
 <body>
+
+    <a href='/Person/register'>Add a new person record</a>
+
     <div id='container'>
         <table>
             <tr>
@@ -20,10 +23,12 @@
                 <th>email</th>
                 <th>weekly_flyer</th>
                 <th>mailing_list</th>
+                <th>delete</th>
 </tr>
 <?php
-foreach($data as $person) {
-echo "<tr><td>$person->first_name</td><td>$person->last_name</td><td>$person->email</td><td>$person->weekly_flyer</td><td>$person->mailing_list</td></tr>";
+foreach($data as $index => $person) {
+echo "<tr><td>$person->first_name</td><td>$person->last_name</td><td>$person->email</td><td>
+$person->weekly_flyer</td><td>$person->mailing_list</td><td><a href='/Person/delete?id=$index'>X</a></td><td><a href='/Person/edit?id=$index'>Edit</a></td></tr>";
             }
             ?>
             </table>

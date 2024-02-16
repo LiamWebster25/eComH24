@@ -34,6 +34,7 @@
             </div>
             <div class="form-group">
                 <input type="submit" name="action" value="Register" />
+                <a href='/Person/'>Cancel</a>
             </div>
         </form>
     </div>

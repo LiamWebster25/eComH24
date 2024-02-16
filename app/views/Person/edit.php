@@ -13,7 +13,7 @@
 
 <body>
     <div id='container'>
-        <form method='post' action='/Person/complete_registration'>
+        <form method='post' action='/Person/update?id=<?=$data->id?>'>
             <div class="form-group">
                 <label>First Name: <input type="text" class="form-control"
                  name="first_name" placeholder="John" value="<?= $data->first_name ?>"/></label>
@@ -32,7 +32,7 @@
                 <label><input type="checkbox" name="publications[]" value = "" <?= ($data->
                 weekly_flyer == true ? 'checked' : '') ?>/>Send me the weekly flyer?</label>
             <div class="form-group">
-                <input type="submit" name = "action" value="Register"/>
+                <input type="submit" name = "action" value="Update"/>
             </div>
         </form>
     </div>
